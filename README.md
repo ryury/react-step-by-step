@@ -5,12 +5,12 @@
 git clone https://github.com/ryury/react-step-by-step.git
 ```
 
-#### React Project Install
+#### or Create Your React Project
 
 ```
 npm install -g create-react-app
-create-react-app my-app
-cd my-app
+create-react-app your-app
+cd your-app
 ```
 
 #### Serve
@@ -33,6 +33,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ### #1 Basic
 
-https://github.com/ryury/react-step-by-step/tree/step1-basic
-
 기본 구조를 만들다.
+
+https://github.com/ryury/react-step-by-step/tree/step1-basic

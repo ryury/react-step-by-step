@@ -1,19 +1,28 @@
-import React from 'react';
+import React, {Component} from 'react';
+import NaviItem from './NaviItem';
 
-const Navi = () => {
-    return (
-        <div>
-            <div className="navi">
-                Home
+class Navi extends Component {
+    render() {
+        const {naviData, naviIndex, onNaviClick} = this.props;
+
+        const naviItem = naviData.map((item, i) => {
+            return (
+                <NaviItem
+                    key={i.toString()}
+                    idx={i}
+                    title={item}
+                    active={naviIndex === i}
+                    onNaviClick={onNaviClick}
+                />
+            );
+        });
+
+        return (
+            <div>
+                {naviItem}
             </div>
-            <div className="navi">
-                Best
-            </div>
-            <div className="navi">
-                Fashion
-            </div>
-        </div>
-    );
-};
+        );
+    }
+}
 
 export default Navi;

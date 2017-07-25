@@ -36,3 +36,9 @@ It correctly bundles React in production mode and optimizes the build for the be
 기본 구조를 만들다.
 
 https://github.com/ryury/react-step-by-step/tree/step1-basic
+
+### #2 Refactoring
+
+역할에 맞게 컴포넌트를 분리한다.
+
+https://github.com/ryury/react-step-by-step/tree/step2-refactoring

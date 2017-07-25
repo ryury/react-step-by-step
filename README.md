@@ -48,3 +48,9 @@ https://github.com/ryury/react-step-by-step/tree/step2-refactoring
 Redux 패턴으로 리팩토링한다.
 
 https://github.com/ryury/react-step-by-step/tree/step3-redux
+
+### #4 Router
+
+Browser Router를 등록한다.
+
+https://github.com/ryury/react-step-by-step/tree/step4-router

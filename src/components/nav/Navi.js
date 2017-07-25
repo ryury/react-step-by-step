@@ -3,16 +3,15 @@ import NaviItem from './NaviItem';
 
 class Navi extends Component {
     render() {
-        const {naviData, naviIndex, onNaviClick} = this.props;
+        const {naviData, location} = this.props;
 
         const naviItem = naviData.map((item, i) => {
             return (
                 <NaviItem
                     key={i.toString()}
-                    idx={i}
-                    title={item}
-                    active={naviIndex === i}
-                    onNaviClick={onNaviClick}
+                    title={item.title}
+                    path={item.path}
+                    active={location.pathname === item.path}
                 />
             );
         });

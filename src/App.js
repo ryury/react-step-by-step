@@ -6,29 +6,25 @@ import Home from './components/contents/Home';
 import Best from './components/contents/Best';
 import Fashion from './components/contents/Fashion';
 
-import * as actions from './actions';
 import {connect} from 'react-redux';
+
+// Router
+import {Route, withRouter} from 'react-router-dom';
 
 class App extends Component {
     render() {
-        let cntComponent = null;
-
-        if (this.props.naviIndex === 0) {
-            cntComponent = <Home/>
-        } else if (this.props.naviIndex === 1) {
-            cntComponent = <Best/>
-        } else {
-            cntComponent = <Fashion/>
-        }
+        const {naviData, naviIndex, location} = this.props;
 
         return (
             <div>
                 <Navi
-                    naviData={this.props.naviData}
-                    naviIndex={this.props.naviIndex}
-                    onNaviClick={this.props.onNaviClick}
+                    naviData={naviData}
+                    naviIndex={naviIndex}
+                    location={location}
                 />
-                {cntComponent}
+                <Route exact path="/" component={Home}/>
+                <Route path="/best" component={Best}/>
+                <Route path="/fashion" component={Fashion}/>
             </div>
         );
     }
@@ -39,11 +35,6 @@ const mapStateToProps = (state) => ({
     naviData: state.naviData
 });
 
-const mapDispatchToProps = (dispatch) => ({
-    onNaviClick: (idx) => dispatch(actions.naviClick(idx))
-});
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(App);
+export default withRouter(connect(
+    mapStateToProps
+)(App));

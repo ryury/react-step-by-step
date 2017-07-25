@@ -6,30 +6,16 @@ import Home from './components/contents/Home';
 import Best from './components/contents/Best';
 import Fashion from './components/contents/Fashion';
 
+import * as actions from './actions';
+import {connect} from 'react-redux';
+
 class App extends Component {
-    constructor() {
-        super();
-
-        this.state = {
-            naviData: ['Home', 'Best', 'Fashion'],
-            naviIndex: 0
-        };
-
-        this.onNaviClick = this.onNaviClick.bind(this);
-    }
-
-    onNaviClick(idx) {
-        this.setState({
-            naviIndex: idx
-        });
-    }
-
     render() {
         let cntComponent = null;
 
-        if (this.state.naviIndex === 0) {
+        if (this.props.naviIndex === 0) {
             cntComponent = <Home/>
-        } else if (this.state.naviIndex === 1) {
+        } else if (this.props.naviIndex === 1) {
             cntComponent = <Best/>
         } else {
             cntComponent = <Fashion/>
@@ -37,11 +23,27 @@ class App extends Component {
 
         return (
             <div>
-                <Navi naviData={this.state.naviData} naviIndex={this.state.naviIndex} onNaviClick={this.onNaviClick}/>
+                <Navi
+                    naviData={this.props.naviData}
+                    naviIndex={this.props.naviIndex}
+                    onNaviClick={this.props.onNaviClick}
+                />
                 {cntComponent}
             </div>
         );
     }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+    naviIndex: state.naviIndex,
+    naviData: state.naviData
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    onNaviClick: (idx) => dispatch(actions.naviClick(idx))
+});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(App);

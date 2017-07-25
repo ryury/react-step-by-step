@@ -21,8 +21,8 @@ NaviItem.propTypes = {
 NaviItem.defaultProps = {
     title: 'Home',
     active: false,
-    idx: 0,
-    onNaviClick: () => console.warn('onNaviClick not defined')
+    onNaviClick: () => console.warn('onNaviClick not defined'),
+    idx: 0
 };
 
 export default NaviItem;

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import NaviItem from './NaviItem';
 
 class Navi extends Component {
@@ -24,5 +25,17 @@ class Navi extends Component {
         );
     }
 }
+
+Navi.propTypes = {
+    naviData: PropTypes.array,
+    naviIndex: PropTypes.number,
+    onNaviClick: PropTypes.func
+};
+
+Navi.defaultProps = {
+    naviData: [],
+    naviIndex: 0,
+    onNaviClick: () => console.warn('onNaviClick not defined')
+};
 
 export default Navi;

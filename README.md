@@ -39,6 +39,6 @@ https://github.com/ryury/react-step-by-step/tree/step1-basic
 
 ### #2 Refactoring
 
-역할에 맞게 컴포넌트를 분리한다.
+역할에 맞게 컴포넌트를 분리하고 동작 이벤트를 부여한다.
 
 https://github.com/ryury/react-step-by-step/tree/step2-refactoring

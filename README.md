@@ -33,4 +33,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ### #1 Basic
 
-### #2
+https://github.com/ryury/react-step-by-step/tree/step1-basic
+
+기본 구조를 만들다.

@@ -42,3 +42,15 @@ https://github.com/ryury/react-step-by-step/tree/step1-basic
 역할에 맞게 컴포넌트를 분리하고 동작 이벤트를 부여한다.
 
 https://github.com/ryury/react-step-by-step/tree/step2-refactoring
+
+### #3 Redux
+
+Redux 패턴으로 리팩토링한다.
+
+https://github.com/ryury/react-step-by-step/tree/step3-redux
+
+### #4 Router
+
+Browser Router를 등록한다.
+
+https://github.com/ryury/react-step-by-step/tree/step4-router

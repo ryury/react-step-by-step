@@ -15,17 +15,13 @@ const NaviItem = ({title, active, path}) => {
 NaviItem.propTypes = {
     title: PropTypes.string,
     active: PropTypes.bool,
-    onNaviClick: PropTypes.func,
-    idx: PropTypes.number,
     path: PropTypes.string
 };
 
 NaviItem.defaultProps = {
     title: 'Home',
     active: false,
-    idx: 0,
-    path: '/',
-    onNaviClick: () => console.warn('onNaviClick not defined')
+    path: '/'
 };
 
 export default NaviItem;

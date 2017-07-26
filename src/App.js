@@ -12,6 +12,10 @@ import {connect} from 'react-redux';
 import {Route, withRouter, Switch} from 'react-router-dom';
 
 class App extends Component {
+    shouldComponentUpdate(prevProps) {
+        return JSON.stringify(this.props.location.pathname) !== JSON.stringify(prevProps.location.pathname);
+    }
+
     render() {
         const {naviData, naviIndex, location} = this.props;
 

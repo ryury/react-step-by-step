@@ -9,7 +9,7 @@ import Fashion from './components/contents/Fashion';
 import {connect} from 'react-redux';
 
 // Router
-import {Route, withRouter} from 'react-router-dom';
+import {Route, withRouter, Switch} from 'react-router-dom';
 
 class App extends Component {
     render() {
@@ -22,9 +22,11 @@ class App extends Component {
                     naviIndex={naviIndex}
                     location={location}
                 />
-                <Route exact path="/" component={Home}/>
-                <Route path="/best" component={Best}/>
-                <Route path="/fashion" component={Fashion}/>
+                <Switch>
+                    <Route exact path="/" component={Home}/>
+                    <Route path="/best" component={Best}/>
+                    <Route path="/fashion" component={Fashion}/>
+                </Switch>
             </div>
         );
     }
